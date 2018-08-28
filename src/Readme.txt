@@ -25,7 +25,7 @@ Events -
 State - React Dom won't re render unless state of the component is changed.
 Something what happens inside the component.
 
-Virtual Dom - it has virtual representation of dom - actual dom is slow - accessing,iterating over the actual dom is slow.
+Virtual Dom - it has virtual representation of dom - frequent/(in a loop) updates on the actual dom triggers reflows which blocks UI for the end user. React at a high level does a diff between virtual DOM and live DOM and batches updates.
 on change of state - react re creates virtual dom - then compares new virtual dom with old virtual dom, no changes nothing happens. 
 	if there is change, then it only replaces at that place. It is fast bcz it uses virtual dom for comparison.
 
